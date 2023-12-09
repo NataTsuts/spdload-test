@@ -16,6 +16,7 @@ export const IconButton = ({icon, onClick, style}: Props) => {
     
     return (
         <StyledIconButton onClick={onClick} style={style}>
+            {/* test */}
             {iconMapper[icon]}
        </StyledIconButton>
     )
