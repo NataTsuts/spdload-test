@@ -7,11 +7,17 @@ export const theme = {
     },
     fontSize: {
         default: '24px',
+        medium: '32px',
+        large: '48px'
     },
     fontWeight: {
         light: 300,
-        default: 400,
-        bold: 600,
+        default: 600,
+        bold: 700,
         bolder: 800,
+    },
+    textTransform: {
+        default: 'none',
+        uppercase: 'uppercase'
     }
 }
