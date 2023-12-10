@@ -3,12 +3,13 @@ import { StyledPaginationDotActive, StyledPaginationDotBody } from "./styled"
 interface Props {
     isActive?: boolean,
     color?: 'white' | 'black'
+    onClick?: VoidFunction
 }
 
-export const PaginationDot = ({isActive, color}:Props) => {
+export const PaginationDot = ({ isActive, color, onClick }: Props) => {
     return (
-        <StyledPaginationDotBody color={color ?? 'black'}>
-            {isActive ? (<StyledPaginationDotActive color={color ?? 'black'}/>) : null}
+        <StyledPaginationDotBody onClick={onClick} color={color ?? 'black'}>
+            {isActive ? (<StyledPaginationDotActive color={color ?? 'black'} />) : null}
         </StyledPaginationDotBody>
     )
 }

@@ -1,7 +1,7 @@
+import { HomeHeaderBlock } from "../modules/home/HeaderBlock"
+
 export const HomePage = () => {
-    return(
-        <div>
-            Home
-        </div>
+    return (
+        <HomeHeaderBlock />
     )
 }

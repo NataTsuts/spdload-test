@@ -1,7 +1,4 @@
-import React from 'react';
 import './App.css';
-import { TourCard } from './modules/common/TourCard';
-import { PaginationDot } from './components/PaginationDot';
 import { Header } from './components/Header';
 import {
   BrowserRouter as Router,

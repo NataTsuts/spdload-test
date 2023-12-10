@@ -4,13 +4,15 @@ export const theme = {
         black: '#000',
         pink: '#DD377D',
         primary: '#D3EAFF',
-        secondary: '#ECECEC'
+        secondary: '#ECECEC',
+        dark: '#1E1E1E',
     },
     fontSize: {
         small: '16px',
         default: '24px',
         medium: '32px',
-        large: '48px'
+        large: '48px',
+        huge: '310px'
     },
     fontWeight: {
         light: 300,

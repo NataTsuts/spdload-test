@@ -11,6 +11,7 @@ import { theme } from "../../theme";
     justify-content: space-between;
     align-items: center;
     padding: 19px 80px;
+    z-index: 999;
  `
 
  export const StyledNavLink = styled(NavLink)`
