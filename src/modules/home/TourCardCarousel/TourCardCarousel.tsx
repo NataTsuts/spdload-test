@@ -9,10 +9,11 @@ import { IconButton } from "../../../components/IconButton";
 import { BlockHeaderTypography } from "../../../components/Typography/styled";
 
 interface Props {
-    rockets: Rocket[]
+    rockets: Rocket[],
+    isLoading?: boolean,
 }
 
-export const TourCardCarousel = ({ rockets }: Props) => {
+export const TourCardCarousel = ({ rockets, isLoading }: Props) => {
 
     const carouselItems = rockets.map((rocket, index) => {
         return (
@@ -52,15 +53,19 @@ export const TourCardCarousel = ({ rockets }: Props) => {
                     />
                 </div>
             </StyledFlexDiv>
-            <AliceCarousel
-                ref={carousel}
-                items={carouselItems}
-                disableButtonsControls
-                renderDotsItem={({ isActive }) => (
-                    <PaginationDot isActive={isActive} />
-                )}
-                responsive={responsive}
-            />
+            {isLoading ? (
+                <div>Loading...</div>
+            ) : (
+                <AliceCarousel
+                    ref={carousel}
+                    items={carouselItems}
+                    disableButtonsControls
+                    renderDotsItem={({ isActive }) => (
+                        <PaginationDot isactive={isActive} />
+                    )}
+                    responsive={responsive}
+                />
+            )}
         </div>
     )
 }

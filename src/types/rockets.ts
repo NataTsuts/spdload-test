@@ -5,7 +5,5 @@ export interface Rocket {
 }
 
 export interface GetRocketsResponse {
-    data: {
-        rockets: Rocket[]
-    }
+    rockets: Rocket[]
 }

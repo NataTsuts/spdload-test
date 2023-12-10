@@ -19,7 +19,9 @@ export const TourCard = ({ imgSrc, header, description, onClick, style }: Props)
 
             <CardTextContainer>
                 <CardHeaderTypography style={{ textAlign: 'center' }}>{header}</CardHeaderTypography>
-                <CardDescriptionTypography style={{ marginTop: 16, textAlign: 'center' }}>{description}</CardDescriptionTypography>
+                <CardDescriptionTypography style={{ marginTop: 16, textAlign: 'center' }}>
+                    {description.length > 50 ? `${description.slice(0, 47)}...` : description}
+                </CardDescriptionTypography>
             </CardTextContainer>
 
             <CardActionsContainer>

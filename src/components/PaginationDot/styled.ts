@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { theme } from "../../theme";
 
 interface PaginationDotProps {
-  isActive?: boolean, 
+  isactive?: boolean, 
   color?: "white" | "black"
 }
 
@@ -25,7 +25,7 @@ export const PaginationDot = styled.div<PaginationDotProps>`
     display: block;
     width: 55%;
     height: 55%;
-    background-color: ${({ isActive, color }) => isActive ? theme.colors[color ?? "black"] : "transparent"};
+    background-color: ${({ isactive, color }) => isactive ? theme.colors[color ?? "black"] : "transparent"};
     border-radius: 100%;
   }
 `

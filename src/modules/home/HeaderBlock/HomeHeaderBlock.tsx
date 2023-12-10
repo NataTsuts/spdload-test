@@ -48,9 +48,9 @@ export const HomeHeaderBlock = () => {
           gap: '8px'
         }}
       >
-        <PaginationDot isActive={carouselIndex === 0} color='white' onClick={() => carousel?.current?.slideTo(0)} />
-        <PaginationDot isActive={carouselIndex === 1} color='white' onClick={() => carousel?.current?.slideTo(1)} />
-        <PaginationDot isActive={carouselIndex === 2} color='white' onClick={() => carousel?.current?.slideTo(2)} />
+        <PaginationDot isactive={carouselIndex === 0} color='white' onClick={() => carousel?.current?.slideTo(0)} />
+        <PaginationDot isactive={carouselIndex === 1} color='white' onClick={() => carousel?.current?.slideTo(1)} />
+        <PaginationDot isactive={carouselIndex === 2} color='white' onClick={() => carousel?.current?.slideTo(2)} />
       </StyledFlexDiv>
 
       <MainHeaderTypography

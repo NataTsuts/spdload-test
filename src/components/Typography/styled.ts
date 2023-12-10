@@ -34,5 +34,6 @@ export const CardHeaderTypography = styled.p`
 export const CardDescriptionTypography = styled(CardHeaderTypography)`
     font-weight: ${theme.fontWeight.light};
     text-transform: ${theme.textTransform.default};
+    width: 100%
 `
 

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const CardTextContainer = styled.div`
-     margin-top: 32px;
-     padding: 0 24px;
+    margin-top: 32px;
+    padding: 0 24px;
 `
 
 export const CardActionsContainer = styled.div`

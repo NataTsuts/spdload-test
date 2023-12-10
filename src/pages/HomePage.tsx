@@ -1,39 +1,17 @@
+import { useQuery } from "@apollo/client";
 import { HomeHeaderBlock } from "../modules/home/HeaderBlock"
 import { TourCardCarousel } from "../modules/home/TourCardCarousel"
 import { GetRocketsResponse } from "../types/rockets"
+import { GET_ROCKETS } from "../gql/gqlRockets";
 
 export const HomePage = () => {
-    const mockData: GetRocketsResponse = {
-        data: {
-            rockets: [
-                {
-                    id: "1",
-                    name: "name1",
-                    description: "desc1"
-                },
-                {
-                    id: "1",
-                    name: "name1",
-                    description: "desc1"
-                },
-                {
-                    id: "1",
-                    name: "name1",
-                    description: "desc1"
-                },
-                {
-                    id: "1",
-                    name: "name1",
-                    description: "desc1"
-                }
-            ]
-        }
-    }
 
+    const { loading, data } = useQuery<GetRocketsResponse>(GET_ROCKETS);
+    console.log(data)
     return (
         <>
             <HomeHeaderBlock />
-            <TourCardCarousel rockets={mockData.data.rockets} />
+            <TourCardCarousel isLoading={loading} rockets={data?.rockets ?? []} />
         </>
 
     )
