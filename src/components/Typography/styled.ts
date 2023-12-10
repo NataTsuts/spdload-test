@@ -29,12 +29,15 @@ export const CardHeaderTypography = styled.p`
     font-size: ${theme.fontSize.default};
     font-weight: ${theme.fontWeight.bold};
     text-transform: ${theme.textTransform.uppercase};
+    color: ${theme.colors.dark}
 `
 
-export const CardDescriptionTypography = styled(CardHeaderTypography)`
+export const CardDescriptionTypography = styled.p`
+    font-size: ${theme.fontSize.default};
     font-weight: ${theme.fontWeight.light};
     text-transform: ${theme.textTransform.default};
-    width: 100%
+    color: ${theme.colors.grey}
+
 `
 
 export const ActionTypography = styled.p`
