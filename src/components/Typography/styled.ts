@@ -37,3 +37,14 @@ export const CardDescriptionTypography = styled(CardHeaderTypography)`
     width: 100%
 `
 
+export const ActionTypography = styled.p`
+    font-weight: ${theme.fontWeight.default};
+    font-size: ${theme.fontSize.small};
+    color: ${theme.colors.grey};
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+`
+

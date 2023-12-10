@@ -7,13 +7,7 @@ import {
 } from "react-router-dom";
 import { HomePage } from './pages/HomePage';
 import { FavouritesPage } from './pages/FavouritesPage';
-import {
-  RecoilRoot,
-  atom,
-  selector,
-  useRecoilState,
-  useRecoilValue,
-} from 'recoil';
+import { RecoilRoot } from 'recoil';
 
 function App() {
 

@@ -6,6 +6,7 @@ export const theme = {
         primary: '#D3EAFF',
         secondary: '#ECECEC',
         dark: '#1E1E1E',
+        grey: '#556B84'
     },
     fontSize: {
         small: '16px',

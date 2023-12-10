@@ -9,7 +9,7 @@ export const Header = () => {
     return (
         <StyledHeader>
             <NavLink to='/'>
-                <img src={require(`../../assets/images/logo.png`)} />
+                <img src={require(`../../assets/images/logo.png`)} alt="SpaceX" />
             </NavLink>
             <StyledFlexDiv>
                 <StyledNavLink to='/'
