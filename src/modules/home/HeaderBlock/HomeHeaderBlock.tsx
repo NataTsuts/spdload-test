@@ -2,11 +2,11 @@ import React, { useRef, useState } from 'react';
 import { CarouselImage } from './styled';
 import AliceCarousel, { EventObject } from 'react-alice-carousel';
 import { StyledFlexDiv } from '../../../components/FlexDiv';
-import { PaginationDot } from '../../../components/PaginationDot';
 import { AnchorTypography, HugeHeaderTypography, MainHeaderTypography } from '../../../components/Typography/styled';
 import { Link } from 'react-router-dom';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import { ArrowDownIcon } from '../../../components/icons';
+import { PaginationDot } from '../../../components/PaginationDot/styled';
 
 export const HomeHeaderBlock = () => {
 

@@ -15,6 +15,7 @@ export const HugeHeaderTypography = styled.p`
 `
 
 export const BlockHeaderTypography = styled(MainHeaderTypography)`
+    color: ${theme.colors.dark};
     font-size: ${theme.fontSize.medium};
 `
 
