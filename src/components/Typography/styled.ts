@@ -4,7 +4,8 @@ import { theme } from "../../theme";
 export const MainHeaderTypography = styled.p`
     font-size: ${theme.fontSize.large};
     font-weight: ${theme.fontWeight.bolder};
-    text-transform: ${theme.textTransform.default};
+    text-transform: ${theme.textTransform.uppercase};
+    color: ${theme.colors.white}
 `
 
 export const BlockHeaderTypography = styled(MainHeaderTypography)`
