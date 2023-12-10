@@ -8,14 +8,15 @@ interface Props {
     imgSrc: string,
     header: string,
     description: string,
-    onClick?: () => void
-    style?: React.CSSProperties
+    onClickFavourite?: () => void,
+    style?: React.CSSProperties,
+    isFavourite?: boolean
 }
 
-export const TourCard = ({ imgSrc, header, description, onClick, style }: Props) => {
+export const TourCard = ({ imgSrc, header, description, onClickFavourite, style, isFavourite }: Props) => {
     return (
         <StyledCardContainer style={style}>
-            <img src={imgSrc} alt="" />
+            <img src={imgSrc} alt="Tour" />
 
             <CardTextContainer>
                 <CardHeaderTypography style={{ textAlign: 'center' }}>{header}</CardHeaderTypography>
@@ -26,7 +27,7 @@ export const TourCard = ({ imgSrc, header, description, onClick, style }: Props)
 
             <CardActionsContainer>
                 <Button name="Buy" />
-                <IconButton icon="heart" />
+                <IconButton onClick={onClickFavourite} icon={isFavourite ? 'trash' : 'heart'} />
             </CardActionsContainer>
         </StyledCardContainer>
     )

@@ -7,18 +7,26 @@ import {
 } from "react-router-dom";
 import { HomePage } from './pages/HomePage';
 import { FavouritesPage } from './pages/FavouritesPage';
+import {
+  RecoilRoot,
+  atom,
+  selector,
+  useRecoilState,
+  useRecoilValue,
+} from 'recoil';
 
 function App() {
 
-
   return (
-    <Router>
-      <Header />
-      <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='/favourites' element={<FavouritesPage />} />
-      </Routes>
-    </Router>
+    <RecoilRoot>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/favourites' element={<FavouritesPage />} />
+        </Routes>
+      </Router>
+    </RecoilRoot>
   );
 }
 

@@ -7,6 +7,8 @@ import { useRef } from "react";
 import { PaginationDot } from "../../../components/PaginationDot/styled";
 import { IconButton } from "../../../components/IconButton";
 import { BlockHeaderTypography } from "../../../components/Typography/styled";
+import { favouriteTripsState } from "../../../recoil/atoms/favouriteTripsAtom";
+import { useRecoilState } from "recoil";
 
 interface Props {
     rockets: Rocket[],
@@ -15,6 +17,19 @@ interface Props {
 
 export const TourCardCarousel = ({ rockets, isLoading }: Props) => {
 
+    const [trips, setTrips] = useRecoilState<Rocket[]>(favouriteTripsState);
+
+    const toggleFavourite = (newTrip: Rocket) => {
+        if (trips.find((trip) => trip.id === newTrip.id)) {
+            //if this trip exists - delete it
+            const temp = trips.filter((trip) => trip.id !== newTrip.id)
+            setTrips(temp)
+        } else {
+            //else add new trip to favourites atom
+            setTrips([...trips, newTrip]);
+        }
+    };
+
     const carouselItems = rockets.map((rocket, index) => {
         return (
             <StyledFlexDiv key={rocket.id} style={{ margin: '0 5px' }}>
@@ -22,6 +37,9 @@ export const TourCardCarousel = ({ rockets, isLoading }: Props) => {
                     imgSrc={require(`../../../assets/images/space-${index % 3 + 1}.png`)}
                     header={rocket.name}
                     description={rocket.description}
+                    onClickFavourite={() => { toggleFavourite(rocket) }}
+                    //if rocket is in atom
+                    isFavourite={trips.includes(rocket)}
                 />
             </StyledFlexDiv>
         )
