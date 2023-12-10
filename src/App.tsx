@@ -1,29 +1,27 @@
 import React from 'react';
 import './App.css';
 import { TourCard } from './modules/TourCard';
-
+import { PaginationDot } from './components/PaginationDot';
+import { Header } from './components/Header';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+import { HomePage } from './pages/HomePage';
+import { FavouritesPage } from './pages/FavouritesPage';
 
 function App() {
 
-  const generateTours = () => {
-    const toursArray = []
-    for (let i = 0; i < 3; i++) {
-      toursArray.push(
-        <TourCard
-          key={i}
-          imgSrc={require(`./assets/images/space-${i + 1}.png`)}
-          header="extraordinary tour"
-          description="Lorem ipsum dolor sit amet consectetur adipiscing elit"
-        />
-      )
-    }
-    return toursArray
-  }
 
   return (
-    <div style={{ display: 'flex', alignItems: 'center' }}>
-      {generateTours()}
-    </div>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/favourites' element={<FavouritesPage />} />
+      </Routes>
+    </Router>
   );
 }
 
