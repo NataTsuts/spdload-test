@@ -3,7 +3,7 @@ import { CarouselImage } from './styled';
 import AliceCarousel, { EventObject } from 'react-alice-carousel';
 import { StyledFlexDiv } from '../../../components/FlexDiv';
 import { AnchorTypography, HugeHeaderTypography, MainHeaderTypography } from '../../../components/Typography/styled';
-import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import { ArrowDownIcon } from '../../../components/icons';
 import { PaginationDot } from '../../../components/PaginationDot/styled';
